@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
+
 const Navbar = () => {
   return (
-    <div>
-      <nav className="flex items-center justify-between px-5 py-6 shadow-md ">
+    <div className="">
+      <nav className="flex items-center justify-between px-5 py-6 shadow-md">
         <Logo></Logo>
+
         <ul className="flex gap-5">
           <li>
             <NavLink
@@ -20,6 +22,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/favorites"
