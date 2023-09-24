@@ -4,6 +4,7 @@ import Phones from "../../Components/Phones/Phones";
 
 const Home = () => {
   const phones = useLoaderData();
+  console.log("home", phones);
 
   return (
     <div>

@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const PhoneCard = ({ phone }) => {
   const { id, image, phone_name, brand_name, price, rating } = phone || {};
   return (
     <div className="self-center justify-self-center">
-      <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+      <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-[315px] rounded-xl bg-clip-border">
         <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
           <img src={image} />
         </div>
@@ -24,12 +25,14 @@ const PhoneCard = ({ phone }) => {
           <p>{rating}</p>
         </div>
         <div className="p-6 pt-0">
-          <button
-            className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-base font-bold text-white bg-green-400 hover:bg-green-300 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
-            type="button"
-          >
-            See Details
-          </button>
+          <Link to={`/phones/${id}`}>
+            <button
+              className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-base font-bold text-white bg-green-400 hover:bg-green-300 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
+              type="button"
+            >
+              See Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
