@@ -1,3 +1,6 @@
+// ES6 Modules or TypeScript
+import Swal from "sweetalert2";
+
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -15,6 +18,17 @@ const Phone = () => {
     if (!favoritesItem.includes(id)) {
       favoritesItem.push(id);
       localStorage.setItem("favoritesItem", JSON.stringify(favoritesItem));
+      Swal.fire(
+        "Good job!",
+        "You have added this item to favorite list!",
+        "success"
+      );
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "This item is already added to favorite list!",
+      });
     }
   };
 

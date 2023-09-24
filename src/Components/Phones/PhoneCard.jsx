@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const PhoneCard = ({ phone }) => {
   const { id, image, phone_name, brand_name, price, rating } = phone || {};
   return (
-    <div className="self-center justify-self-center">
+    <div className="self-center px-4 justify-self-center">
       <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-[315px] rounded-xl bg-clip-border">
         <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
           <img src={image} />
