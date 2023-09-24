@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { GlobalContext } from "../../main";
+
 const Login = () => {
+  const contextApiValue = useContext(GlobalContext);
+  console.log("context value", contextApiValue);
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
